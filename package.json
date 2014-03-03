@@ -1,0 +1,52 @@
+{
+  "name": "contacts",
+  "version": "0.0.0",
+  "description": "Client Side Contact Database",
+  "main": "server.js",
+  "scripts": {
+    "start": "beefy ../lib/index.js:js/bundle.js --live --cwd ./public",
+    "test": "karma start karma.conf.js"
+  },
+  "keywords": [
+    "angularjs"
+  ],
+  "author": "Alex Arnell",
+  "license": "ISC",
+  "dependencies": {
+    "beefy": "~1.1.0"
+  },
+  "devDependencies": {
+    "karma": "~0.10.9",
+    "karma-browserify": "git+https://github.com/voidlock/karma-browserify.git#use-browserify-hash-function",
+    "chokidar": "git+https://github.com/paulmillr/chokidar.git",
+    "browserify": "~3.31.0",
+    "browserify-shim": "~3.2.2",
+    "coffee-script": "~1.7.1"
+  },
+  "jshintConfig": {
+    "node": true
+  },
+  "browserify": {
+    "debug": true,
+    "watch": true,
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browser": {
+    "angular": "./public/js/angular.js",
+    "ngMock": "./public/js/angular-mocks.js",
+    "ngStorage": "./public/js/ngStorage.js",
+    "ui-router": "./public/js/angular-ui-router.js"
+  },
+  "browserify-shim": {
+    "angular": "angular",
+    "ngMock": {
+      "depends": "angular",
+      "exports": "angular.mock"
+    },
+    "ngStorage": {
+      "depends": "angular"
+    }
+  }
+}

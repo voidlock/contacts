@@ -1,0 +1,43 @@
+<section class="row">
+  <div class="col-sm-12">
+    <h1>{{contact.name}}</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-4">
+    <img gravatar="{{contact.email}}" size="250">
+  </div>
+  <div class="col-sm-8 contact-info">
+    <div class="row">
+      <div class="col-sm-2">
+        <strong>Sex</strong><br>
+        {{contact.sex}}
+      </div>
+      <div class="col-sm-2">
+        <strong>Age</strong><br>
+        {{contact.age}}
+      </div>
+      <div class="col-sm-2">
+        <strong>Birthday</strong><br>
+        {{contact.birthday}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <strong>Address</strong><br>
+        {{contact.address.street}}<br>
+        {{contact.address.city}} {{contact.address.state}}, {{contact.address.postcode}}<br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <strong>Phone</strong><br>
+        {{contact.phone}}
+      </div>
+      <div class="col-sm-4">
+        <strong>Email</strong><br>
+        {{contact.email}}
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,10 @@
+*.log
+*.out
+*.dat
+*.pid
+*.gz
+
+pids
+logs
+results
+build

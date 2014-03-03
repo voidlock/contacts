@@ -1,0 +1,21 @@
+<div class="row">
+  <nav class="col-md-3 sidebar">
+    <ul class="nav nav-sidebar">
+      <li class="text-center">
+        <button type="button" class="btn btn-default navbar-btn" ng-click="newContact()">
+          <i class="fa fa-plus"></i> New Contact
+        </button>
+      </li>
+      <li ng-repeat="contact in contacts" class="contact">
+        <a ui-sref="contacts.show({id: contact.id})">
+          <img gravatar="{{contact.email}}" size="40">
+          {{contact.name}}
+          <i ng-if="isSelectedContact(contact.id)" class="fa active pull-right fa-chevron-right"></i>
+        </a>
+      </li>
+    </ul>
+    <footer class="text-center">Contacts v<span app-version></span></footer>
+  </div>
+
+  <div class="col-md-9 col-md-offset-3 main" ui-view></div>
+</div>

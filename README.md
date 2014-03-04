@@ -1,4 +1,4 @@
-# contacts
+# Contacts - AngularJS Demo
 
 ## Quick Start
 

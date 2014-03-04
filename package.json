@@ -13,7 +13,7 @@
     "angularjs",
     "browserify"
   ],
-  "homepage": "",
+  "homepage": "http://fast-retreat-3971.herokuapp.com/",
   "repository": {
     "type": "git",
     "url": "git://github.com/voidlock/contacts.git"

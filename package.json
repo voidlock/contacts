@@ -1,9 +1,9 @@
 {
   "name": "contacts",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Client Side Contact Database",
   "scripts": {
-    "start": "beefy ../lib/index.js:js/bundle.js 5000 --live --cwd ./public",
+    "start": "pushserve --port 5000 --path ./public",
     "prepublish": "browserify ./lib/index.js > ./public/js/bundle.js",
     "test": "karma start karma.conf.js"
   },
@@ -14,17 +14,22 @@
   ],
   "author": "Alex Arnell",
   "license": "ISC",
+  "engines" : {"node" : "0.11.x"},
   "dependencies": {
     "pushserve": "~0.1.6"
   },
   "devDependencies": {
-    "beefy": "~1.1.0",
     "karma": "~0.10.9",
     "karma-browserify": "git+https://github.com/voidlock/karma-browserify.git#use-browserify-hash-function",
     "chokidar": "git+https://github.com/paulmillr/chokidar.git",
     "browserify": "~3.31.0",
     "browserify-shim": "~3.2.2",
-    "coffee-script": "~1.7.1"
+    "coffee-script": "~1.7.1",
+    "gulp": "~3.5.5",
+    "watchify": "~0.6.1",
+    "vinyl-source-stream": "~0.1.1",
+    "gulp-livereload": "~1.2.0",
+    "gulp-util": "~2.2.14"
   },
   "jshintConfig": {
     "node": true

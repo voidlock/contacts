@@ -2,20 +2,23 @@
   "name": "contacts",
   "version": "0.0.0",
   "description": "Client Side Contact Database",
-  "main": "server.js",
   "scripts": {
-    "start": "beefy ../lib/index.js:js/bundle.js --live --cwd ./public",
+    "start": "beefy ../lib/index.js:js/bundle.js 5000 --live --cwd ./public",
+    "prepublish": "browserify ./lib/index.js > ./public/js/bundle.js",
     "test": "karma start karma.conf.js"
   },
   "keywords": [
-    "angularjs"
+    "demo",
+    "angularjs",
+    "browserify"
   ],
   "author": "Alex Arnell",
   "license": "ISC",
   "dependencies": {
-    "beefy": "~1.1.0"
+    "pushserve": "~0.1.6"
   },
   "devDependencies": {
+    "beefy": "~1.1.0",
     "karma": "~0.10.9",
     "karma-browserify": "git+https://github.com/voidlock/karma-browserify.git#use-browserify-hash-function",
     "chokidar": "git+https://github.com/paulmillr/chokidar.git",

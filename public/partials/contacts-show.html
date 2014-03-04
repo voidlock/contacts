@@ -1,23 +1,30 @@
-<section class="row">
+<div class="row contact-info">
   <div class="col-sm-12">
-    <h1>{{contact.name}}</h1>
+    <h1>
+      {{contact.name}}
+      <small>
+        <a class="text-muted" ui-sref="contacts.edit({id: contact.id})">
+          <i class="fa fa-pencil"></i>
+        </a>
+      </small>
+    </h1>
   </div>
 </div>
 <div class="row">
   <div class="col-sm-4">
-    <img gravatar="{{contact.email}}" size="250">
+    <img gravatar="contact.email" size="250">
   </div>
-  <div class="col-sm-8 contact-info">
+  <div class="col-sm-8 address-info">
     <div class="row">
-      <div class="col-sm-2">
+      <div class="col-sm-3">
         <strong>Sex</strong><br>
         {{contact.sex}}
       </div>
-      <div class="col-sm-2">
+      <div class="col-sm-3">
         <strong>Age</strong><br>
         {{contact.age}}
       </div>
-      <div class="col-sm-2">
+      <div class="col-sm-3">
         <strong>Birthday</strong><br>
         {{contact.birthday}}
       </div>
@@ -30,14 +37,13 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-4">
+      <div class="col-sm-5">
         <strong>Phone</strong><br>
         {{contact.phone}}
       </div>
-      <div class="col-sm-4">
+      <div class="col-sm-6 col-md-offset-1">
         <strong>Email</strong><br>
         {{contact.email}}
       </div>
     </div>
   </div>
-</section>

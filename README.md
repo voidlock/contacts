@@ -1,5 +1,13 @@
 # Contacts - AngularJS Demo
 
+An AngularJS Contacts database demo. This demo uses browserify to package all
+the javascript into a single bundle. Tests are run using Karma and Jasmine.
+
+The demo will seed itself with 3 contacts. Contacts are stored in a
+localStorage database. Communication with the localStorage backend has been
+built to simulates asynchronous communication with another
+backend, such as $http or $resource.
+
 ## Quick Start
 
 To quickly get up and running with a server. You must first install the latest

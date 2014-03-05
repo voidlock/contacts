@@ -1,7 +1,7 @@
 {
   "name": "contacts",
   "nopublish": true,
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Client Side Contact Database",
   "scripts": {
     "start": "pushserve --port 5000 --path ./public",
